@@ -16,7 +16,7 @@ const viewspath=path.join(__dirname,'../template/views')
 const partialPath=path.join(__dirname,'../template/partials')
 
 const app=express()
-
+const port =process.env.PORT || 3000
 //setup handlebars
 app.set('view engine','hbs')
 app.set('views',viewspath)
@@ -100,6 +100,6 @@ app.get('*',(req,res)=>{
     })
 
 })
-app.listen(3000,()=>{
-    console.log("sever is on port 3000")
+app.listen(port,()=>{
+    console.log("sever is on port"+port)
 })
