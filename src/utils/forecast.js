@@ -16,7 +16,9 @@ const forecast=(lattitude,longitude,callback)=>{
          else{
              callback(undefined,
                 
-                "at" +body.name+"temp is"+body.main['temp']+"and weather is"+body.weather[0].main
+              "At " +body.name+" temp is "+body.main['temp']+" and weather is "+body.weather[0].main+" \n Min temp is "+body.main.temp_min+"Max temp is"+body.main.temp_max+"."
+
+
              )
             
  
